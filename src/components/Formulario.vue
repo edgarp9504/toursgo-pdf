@@ -35,6 +35,7 @@ export default {
         const fecha = new Date();
         const mesActual = Intl.DateTimeFormat('es-ES',{month:'long'}).format(fecha)  ;
         const day = fecha.getDate();
+        const year = fecha.getFullYear();
 
 
         let docDefinition = {
@@ -44,7 +45,7 @@ export default {
                     image: 'logo_name',
                     width: 200
                 },
-                `\n\nCancún Quintana Roo ${day} de ${mesActual} 2022.\n\n\n\n`,
+                `\n\nCancún Quintana Roo ${day} de ${mesActual} ${year}.\n\n\n\n`,
                 
                 {text: 'ORDEN DE SERVICIO. \n\n\n\n', style: 'header',alignment: 'center'},
                 
