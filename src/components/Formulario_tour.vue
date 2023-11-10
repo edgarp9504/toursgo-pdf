@@ -36,7 +36,7 @@ export default {
     generatePDF(){
 
         const fecha = new Date();
-        const mesActual = Intl.DateTimeFormat('es-ES',{month:'long'}).format(fecha)  ;
+        const mesActual = Intl.DateTimeFormat('es-ES',{month:'long'}).format(fecha);
         const day = fecha.getDate();
         const year = fecha.getFullYear();
 
@@ -184,10 +184,6 @@ export default {
         };
 
         const pdf = pdfMake.createPdf(docDefinition)
-        let s = document.querySelectorAll('canvas')[0]
-        let imageDataUrl = s.toDataURL(docDefinition)
-
-        
         const codigo = this.booked.cliente.substring(0,3).toLocaleUpperCase()
         const tourcode = this.booked.name_tour.substring(0,3).toLocaleUpperCase()
 
